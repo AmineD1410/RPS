@@ -1,0 +1,116 @@
+@keyframes fade-out {
+    from {opacity: 100;}
+    to {opacity: 0;
+    transform: scale(0.8);}
+  }
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(0.8);}
+    to {opacity: 100;}
+  }
+  @font-face {
+    font-family: 'Robotic';
+    src: url('./SpaceQuest-yOY3.ttf');
+}
+@font-face {
+    font-family: 'Robotic-2';
+    src: url('./Anterobot-Rp0E3.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.275), rgba(0, 0, 0, 0.802)), url(./Images/bck.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+h1 {
+    text-align: center;
+    font-family: 'Robotic-2';    
+    margin: 25px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    letter-spacing: 2px;
+    line-height: 100px;
+}
+span {
+    font-size: 45px;
+}
+.play {
+    font-size: 40px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: white;
+    background-image: linear-gradient(#998f5f, #706843);
+    font-family: 'Robotic'; 
+}
+.play:hover {
+    transform: scale(1.2);
+    background-image: linear-gradient(#706843, #998f5f);
+    padding: 5px 15px;
+}
+.fade-out-animation {
+    animation-name: fade-out;
+    animation-duration: 1s;
+}
+.fade-in-animation {
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+.game-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+.game-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+.game-image{
+    width: 300px;
+    height: 300px;
+}
+.game-image:hover{
+    transform: scale(1.1);
+}
+.game-image:active {
+    transform: scale(1.5);
+}
+p {
+    font-size: 30px;
+    color:rgb(223, 223, 223);
+    font-family: 'Rubik Marker Hatch', cursive; 
+}
+h3 {
+    background-image: linear-gradient(rgba(100,117,125,255), rgba(22,29,37,255));
+    color: rgb(247, 243, 226);
+    font-family: 'Rubik Marker Hatch', cursive;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 0px 14px 5px #606060; 
+    box-shadow: 0px 0px 14px 5px #606060;
+}
+a {
+    text-decoration: none;
+    color: white;
+}

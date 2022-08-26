@@ -1,44 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
     <title>RPS</title>
 </head>
-<script>
-    const getComputerChoice = function () {
-        const choice = ["ROCK", "PAPER", "SCISSORS"];
-        const randomIndex = Math.floor(Math.random() * choice.length);
-        const randomItem = choice[randomIndex];
-        return randomItem;
-    }
-    let a=0; let b=0;
-    function singleGame(getComputerChoice, playerSelection) {
-        
-        if(playerSelection.toUpperCase()=="ROCK" && getComputerChoice=="ROCK") return "It's a draw!";
-        if(playerSelection.toUpperCase()=="PAPER" && getComputerChoice=="PAPER") return "It's a draw!";
-        if(playerSelection.toUpperCase()=="SCISSORS" && getComputerChoice=="SCISSORS") return "It's a draw!"
-        if(playerSelection.toUpperCase()=="ROCK" && getComputerChoice=="PAPER")  {++b; return "You Lose! Paper beats Rock";}
-        if(playerSelection.toUpperCase()=="ROCK" && getComputerChoice=="SCISSORS"){ ++a; return "You Win! Rock beats Scissors"}
-        if(playerSelection.toUpperCase()=="PAPER" && getComputerChoice=="ROCK") {++a; return "You Win! Paper beats Rock"}
-        if(playerSelection.toUpperCase()=="PAPER" && getComputerChoice=="SCISSORS") {++b; return "You Lose! Scissors beat Paper"}
-        if(playerSelection.toUpperCase()=="SCISSORS" && getComputerChoice=="ROCK") {++b; return "You Lose! Rock beats Scissors"}
-        if(playerSelection.toUpperCase()=="SCISSORS" && getComputerChoice=="PAPER") {++a; return "You Win! Scissors beats Paper"}
-    }
-    function game() {
-        while(b<5 && a<5){
-            const playerSelection = prompt("Enter your hand: ");
-            console.log(singleGame(getComputerChoice(), playerSelection));
-        }
-        console.log(`The Score is: ${a} - ${b}`);
-        if(a>b) console.log("Congratulations! You win!")
-        if(a<b) console.log("Sorry! You lost!")
-        if(a==b) console.log("It's a draw! Better luck next time!")
-    }
-    game();
-</script>
+
 <body>
-    <h1>This is a Rock-Paper-Scissors game</h1>
+    <div class="intro">
+        <h1>You have the chance to save the world from the evil AI. <br>
+            <span> Beat it in a simple game of Rock-Paper-Scissors </span> <br> Become a Hero!</h1>
+        <button class="play">Save the World</button>
+    </div>
+    <div class="game-content">
+        <div class="game-images">
+            
+        </div>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
