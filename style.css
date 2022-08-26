@@ -70,7 +70,7 @@ span {
     animation-duration: 1s;
 }
 .game-content {
-    height: 100vh;
+    height: 0px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-evenly;
